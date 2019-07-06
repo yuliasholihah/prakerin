@@ -31,6 +31,14 @@ class FrontendController extends Controller
     {
         return view('typo');
     }
+    public function kuliner()
+    {
+        return view('kuliner');
+    }
+    public function traveling()
+    {
+        return view('traveling');
+    }
 
     /**
      * Show the form for creating a new resource.

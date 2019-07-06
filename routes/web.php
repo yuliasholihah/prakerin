@@ -29,4 +29,6 @@ Route::get('about', 'FrontendController@about');
 Route::get('contact', 'FrontendController@contact');
 Route::get('archive', 'FrontendController@archive');
 Route::get('typo', 'FrontendController@typo');
+Route::get('kuliner', 'FrontendController@kuliner');
+Route::get('traveling', 'FrontendController@traveling');
 
