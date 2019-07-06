@@ -169,7 +169,7 @@
             <!-- Single Hero Post -->
             <div class="single-hero-post d-flex flex-wrap">
                 <!-- Post Thumbnail -->
-                <div class="slide-post-thumbnail h-100 bg-img" style="background-image: url(img/blog-img/14.jpg);"></div>
+                <div class="slide-post-thumbnail h-100 bg-img" style="background-image: url(/assets/frontend/img/blog-img/14.jpg);"></div>
                 <!-- Post Content -->
                 <div class="slide-post-content h-100 d-flex align-items-center">
                     <div class="slide-post-text">
@@ -188,7 +188,7 @@
             <!-- Single Hero Post -->
             <div class="single-hero-post d-flex flex-wrap">
                 <!-- Post Thumbnail -->
-                <div class="slide-post-thumbnail h-100 bg-img" style="background-image: url(img/blog-img/15.jpg);"></div>
+                <div class="slide-post-thumbnail h-100 bg-img" style="background-image: url(/assets/frontend/img/blog-img/15.jpg);"></div>
                 <!-- Post Content -->
                 <div class="slide-post-content h-100 d-flex align-items-center">
                     <div class="slide-post-text">
