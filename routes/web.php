@@ -11,10 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+// Route::get('/', function () {
+//     return view('index');
+// });
+Route::get('/about', function () {
+    return view('about');
 });
+
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'FrontendController@index');
+Route::get('about', 'FrontendController@about');
+Route::get('contact', 'FrontendController@contact');
+Route::get('archive', 'FrontendController@archive');
+Route::get('typo', 'FrontendController@typo');
+
