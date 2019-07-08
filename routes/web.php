@@ -32,3 +32,14 @@ Route::get('typo', 'FrontendController@typo');
 Route::get('kuliner', 'FrontendController@kuliner');
 Route::get('traveling', 'FrontendController@traveling');
 
+Route::group(['prefix'=>'admin','middleware'=>['auth']],
+function () {
+    Route::get('/', function () {
+        return view('backend.index');
+    });
+    route::resource('kategori','KategoriController');
+    route::resource('tag','TagController');
+    route::resource('artikel','ArtikelController');
+}
+);
+

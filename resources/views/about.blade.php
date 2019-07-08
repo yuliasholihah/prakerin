@@ -62,7 +62,7 @@
                                         <div class="dropdown">
                                             <ul class="single-mega cn-col-4">
                                                 <li><a href="{{url('kuliner')}}">kuliner</a></li>
-                                                <li><a href="#">traveling</a></li>
+                                                <li><a href="{{url('traveling')}}">traveling</a></li>
                                               
                                             </ul>
                                             
