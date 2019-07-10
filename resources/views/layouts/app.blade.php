@@ -23,17 +23,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/admin') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
-                </a>
-                <a class="navbar-brand" href="{{ url('/admin/artikel') }}">
-                    Artikel
-                </a>
-                <a class="navbar-brand" href="{{ url('/admin/kategori') }}">
-                    Kategori
-                </a>
-                <a class="navbar-brand" href="{{ url('/admin/tag') }}">
-                    Tag
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -85,5 +76,8 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{('assets/frontend/js/jquery/jquery-2.2.4.min.js')}}"></script>
+    <script src="{{ asset('js/siswa.js') }}"></script>
+    @stack('script')
 </body>
 </html>

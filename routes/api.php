@@ -17,8 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware' =>['cors'], function() {
-   Route::resource('siswa','DataController');
+Route::group(['middleware' => 'cors'], function() {
+   Route::resource('siswa','SiswaController');
    Route::resource('sekolah','SekolahController');
  });
 
