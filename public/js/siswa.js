@@ -4,9 +4,9 @@ $(function () {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
   });
-  var alamat_kategori = 'api/kategori'
-  var alamat_tag = 'api/tag'
-  var alamat_artikel = 'api/artikel'
+  var alamat_kategori = '/api/kategori'
+  var alamat_tag = '/api/tag'
+  var alamat_artikel = '/api/artikel'
 
   // kategori
   // Get Data Siswa

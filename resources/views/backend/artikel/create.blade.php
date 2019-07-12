@@ -78,13 +78,11 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                <label for="">Konten</label>
-                <textarea class="form-control" name="konten" id="editor1" required></textarea>
-            </div>
-            <script>
-                CKEDITOR.replace("editor1", {
-                });
-            </script>
+                        <label for="">Konten</label>
+                        <textarea class="form-control ckeditor" name="konten" required></textarea>
+                    </div>
+                    
+            
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-outline-info btn-rounded btn-block">
                                             Simpan Data
@@ -97,3 +95,8 @@
                 </div>
             </section>
 @endsection
+@push('script')
+<script>
+        CKEDITOR.replace('texteditor');
+    </script>
+    @endpush
