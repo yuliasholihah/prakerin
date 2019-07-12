@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Halaman Admin') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -131,17 +131,17 @@ span.psw {
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <a class="navbar-brand" href="{{ url('/artikel') }}">
+                <a class="navbar-brand" href="{{ url('/admin/artikel') }}">
                     Artikel
                 </a>
-                <a class="navbar-brand" href="{{ url('/kategori') }}">
+                <a class="navbar-brand" href="{{ url('/admin/kategori') }}">
                     Kategori
                 </a>
-                <a class="navbar-brand" href="{{ url('/tag') }}">
+                <a class="navbar-brand" href="{{ url('/admin/tag') }}">
                     Tag
                 </a>
-                <a class="navbar-brand" href="{{ url('/home') }}">
-                    Siswa
+                <a class="navbar-brand" href="{{ url('/admin/home') }}">
+                    
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -195,6 +195,10 @@ span.psw {
     </div>
     <script src="{{('assets/frontend/js/jquery/jquery-2.2.4.min.js')}}"></script>
     <script src="{{ asset('js/siswa.js') }}"></script>
+    <script src="{{('assets/backend/ckeditor/ckeditor.js')}}"></script>
+    <script>
+        CKEDITOR.replace('texteditor');
+    </script>
     @stack('script')
 </body>
 </html>

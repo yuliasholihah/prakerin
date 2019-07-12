@@ -142,7 +142,7 @@ $(function () {
     })
   })
 
-  // artikel
+  // ARTIKEL
 
   $.ajax({
     url: alamat_artikel,
@@ -172,37 +172,30 @@ $(function () {
     }
   })
 
-  $.ajax({
-    url: alamat_kategori,
-    method: "GET",
-    dataType: "json",
-
-    success: function (berhasil) {
-      // console.log(berhasil)
-      $.each(berhasil.data, function (key, value) {
-        $(".td-kategori").append(
-          `
-                ${value.id_kategori}${value.nama_kategori}          
-                `
-        )
-      })
-    }
-  })
 
   // Simpan Data
-  $(".tombol-simpan-tag").click(function (simpan) {
+  $(".tombol-simpan-artikel").click(function (simpan) {
     simpan.preventDefault();
-    var variable_isian_nama = $("input[name=nama_tag]").val()
+    var variable_isian_judul = $("input[name=judul]").val()
+    var variable_isian_foto = $("input[name=foto]").val()
+    var variable_isian_kategori = $("select[name=id_kategori]").val()
+    var variable_isian_tag = $("select[name=tag]").val()
+    var variable_isian_konten = $("textarea[name=konten]").val()
     // console.log(nama)
     $.ajax({
-      url: alamat_tag,
+      url: alamat_artikel,
       method: "POST",
       dataType: "json",
       data: {
-        nama_tag: variable_isian_nama
+        judul: variable_isian_judul,
+        foto: variable_isian_foto,
+        id_kategori: variable_isian_kategori,
+        tag: variable_isian_tag,
+        konten: variable_isian_konten
       },
-      success: function (berhasil) {
-        alert(berhasil.message)
+
+      success: function (data) {
+        alert(data.message)
         location.reload();
       },
       error: function (gagal) {
@@ -230,6 +223,44 @@ $(function () {
         console.log(gagal)
       }
     })
+  })
+
+  $.ajax({
+    url: alamat_tag,
+    method: "GET",
+    dataType: "json",
+
+    success: function (berhasil) {
+      // console.log(berhasil)
+      $.each(berhasil.data, function (key, value) {
+        $(".isi-tag").append(
+          `
+                <option value="${value.id}">
+                                                    ${value.nama_tag}
+                                                </option>        
+                `
+        )
+      })
+    }
+  })
+
+  $.ajax({
+    url: alamat_kategori,
+    method: "GET",
+    dataType: "json",
+
+    success: function (berhasil) {
+      // console.log(berhasil)
+      $.each(berhasil.data, function (key, value) {
+        $(".isi-kategori").append(
+          `
+                <option value="${value.id}">
+                                                    ${value.nama_kategori}
+                                                </option>        
+                `
+        )
+      })
+    }
   })
 })
 
