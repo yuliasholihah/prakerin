@@ -11,16 +11,7 @@
 
 
                     </form> --}}
-                    <div class="form-group">
-                        <label>masukan nama</label>
-                        <input type="text" name="namasiswa" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-success tombol-simpan">Simpan</button>
-                    </div>
-                    <div>
-                        <ul class="data-siswa"></ul>
-                    </div>
+                   <center> <h1>Selamat Datang</h1> </center>
                 </div>
             </div>
         </div>

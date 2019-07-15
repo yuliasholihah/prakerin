@@ -7,6 +7,8 @@
     <script src="{{asset('assets/backend/assets/vendor/ckeditor/ckeditor.js')}}"></script>
     <script src="{{asset('assets/backend/assets/vendor/select2/select2.min.js')}}"></script>
     <script src="{{asset('assets/backend/assets/js/components/select2-init.js')}}"></script>
+    <script src="{{asset('assets/backend/assets/vendor/select2/select2.min.js')}}"></script>
+    <script src="{{asset('assets/backend/assets/js/components/select2-init.js')}}"></script>
     <script>
         CKEDITOR.replace( 'editor1' );
     </script>

@@ -17,6 +17,7 @@
     <script>
         CKEDITOR.replace('texteditor');
     </script>
+   <script src="{{('assets/frontend/js/jquery/jquery-2.2.4.min.js')}}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,6 +25,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+       <script src="{{('assets/frontend/js/jquery/jquery-2.2.4.min.js')}}"></script>
+       
     <style>
 /* Full-width input fields */
 input[type=text], input[type=password] {
