@@ -73,24 +73,7 @@
                                     <li><a href="{{url('contact')}}">Contact</a></li>
                                 </ul>
 
-                                <!-- Search Form -->
-                                <div class="search-form">
-                                    <form action="#" method="get">
-                                        <input type="search" name="search" class="form-control" placeholder="Search and hit enter...">
-                                        <button type="submit"><i class="fa fa-search"></i></button>
-                                    </form>
-                                </div>
-
-                                <!-- Social Button -->
-                                <div class="top-social-info">
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="RSS Feed"><i class="fa fa-rss" aria-hidden="true"></i></a>
-                                </div>
-
-                            </div>
+                                
                             <!-- Nav End -->
                         </div>
                     </nav>
@@ -116,64 +99,25 @@
         </div>
 
         <div class="hero-post-slides owl-carousel">
-
+            @foreach ($artikel as $data)
             <!-- Single Hero Post -->
             <div class="single-hero-post d-flex flex-wrap">
                 <!-- Post Thumbnail -->
-                <div class="slide-post-thumbnail h-100 bg-img" style="background-image: url(/assets/frontend/img/blog-img/13.jpg);"></div>
+                <div class="slide-post-thumbnail h-100 bg-img"><img class="background-image" src="../assets/img/artikel/{{$data->foto}}"></div>
                 <!-- Post Content -->
                 <div class="slide-post-content h-100 d-flex align-items-center">
                     <div class="slide-post-text">
-                        <p class="post-date" data-animation="fadeIn" data-delay="100ms">MAY 01, 2018 / lifestyle</p>
+                        <p class="post-date" data-animation="fadeIn" data-delay="100ms">{{$data->created_at}} / {{$data->kategori->nama_kategori}}</p>
                         <a href="#" class="post-title" data-animation="fadeIn" data-delay="300ms">
-                            <h2>We’ve Launched More May Gal Meets Glam Collection Dresses</h2>
+                            <h2>{{$data->judul}}</h2>
                         </a>
-                        <p class="post-excerpt" data-animation="fadeIn" data-delay="500ms">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                         <a href="#" class="btn nikki-btn" data-animation="fadeIn" data-delay="700ms">Read More</a>
                     </div>
                     <!-- Page Count -->
                     <div class="page-count"></div>
                 </div>
             </div>
-
-            <!-- Single Hero Post -->
-            <div class="single-hero-post d-flex flex-wrap">
-                <!-- Post Thumbnail -->
-                <div class="slide-post-thumbnail h-100 bg-img" style="background-image: url(/assets/frontend/img/blog-img/14.jpg);"></div>
-                <!-- Post Content -->
-                <div class="slide-post-content h-100 d-flex align-items-center">
-                    <div class="slide-post-text">
-                        <p class="post-date" data-animation="fadeIn" data-delay="100ms">MAY 01, 2018 / lifestyle</p>
-                        <a href="#" class="post-title" data-animation="fadeIn" data-delay="300ms">
-                            <h2>A Closer Look At Our Front Porch Items From Lowe’s</h2>
-                        </a>
-                        <p class="post-excerpt" data-animation="fadeIn" data-delay="500ms">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                        <a href="#" class="btn nikki-btn" data-animation="fadeIn" data-delay="700ms">Read More</a>
-                    </div>
-                    <!-- Page Count -->
-                    <div class="page-count"></div>
-                </div>
-            </div>
-
-            <!-- Single Hero Post -->
-            <div class="single-hero-post d-flex flex-wrap">
-                <!-- Post Thumbnail -->
-                <div class="slide-post-thumbnail h-100 bg-img" style="background-image: url(/assets/frontend/img/blog-img/15.jpg);"></div>
-                <!-- Post Content -->
-                <div class="slide-post-content h-100 d-flex align-items-center">
-                    <div class="slide-post-text">
-                        <p class="post-date" data-animation="fadeIn" data-delay="100ms">MAY 01, 2018 / lifestyle</p>
-                        <a href="#" class="post-title" data-animation="fadeIn" data-delay="300ms">
-                            <h2>Answering Your Most Frequent International Transportation Questions</h2>
-                        </a>
-                        <p class="post-excerpt" data-animation="fadeIn" data-delay="500ms">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                        <a href="#" class="btn nikki-btn" data-animation="fadeIn" data-delay="700ms">Read More</a>
-                    </div>
-                    <!-- Page Count -->
-                    <div class="page-count"></div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </section>
     <!-- ##### Hero Area End ##### -->
@@ -190,153 +134,18 @@
 
                             <!-- Featured Post Area -->
                             <div class="col-12">
-                                <div class="featured-post-area mb-50">
-                                    <!-- Thumbnail -->
-                                    <div class="post-thumbnail mb-30">
-                                        <a href="#"><img src="{{('assets/frontend/img/blog-img/12.jpg')}}" alt=""></a>
-                                    </div>
-                                    <!-- Featured Post Content -->
-                                    <div class="featured-post-content">
-                                        <p class="post-date">MAY 7, 2018 / lifestyle</p>
-                                        <a href="#" class="post-title">
-                                            <h2>A Closer Look At Our Front Porch Items From Lowe’s</h2>
-                                        </a>
-                                        <p class="post-excerpt">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
-                                    </div>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta d-flex align-items-center justify-content-between">
-                                        <!-- Author Comments -->
-                                        <div class="author-comments">
-                                            <a href="#"><span>by</span> Colorlib</a>
-                                            <a href="#">03 <span>Comments</span></a>
-                                        </div>
-                                        <!-- Social Info -->
-                                        <div class="social-info">
-                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
+                                <div id="post-area">
+
                                 </div>
                             </div>
 
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-sm-6">
-                                <div class="single-blog-post mb-50">
-                                    <!-- Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <a href="#"><img src="{{('assets/frontend/img/blog-img/1.jpg')}}" alt=""></a>
-                                    </div>
-                                    <!-- Content -->
-                                    <div class="post-content">
-                                        <p class="post-date">MAY 10, 2018 / life</p>
-                                        <a href="#" class="post-title">
-                                            <h4>Travel Tuesday: Answering Your Most Frequent International Transportation Questions</h4>
-                                        </a>
-                                        <p class="post-excerpt">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-sm-6">
-                                <div class="single-blog-post mb-50">
-                                    <!-- Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <a href="#"><img src="{{('assets/frontend/img/blog-img/2.jpg')}}" alt=""></a>
-                                    </div>
-                                    <!-- Content -->
-                                    <div class="post-content">
-                                        <p class="post-date">MAY 17, 2018 / Sport</p>
-                                        <a href="#" class="post-title">
-                                            <h4>A Closer Look At Our Front Porch Items From Lowe’s</h4>
-                                        </a>
-                                        <p class="post-excerpt">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-sm-6">
-                                <div class="single-blog-post mb-50">
-                                    <!-- Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <a href="#"><img src="{{('assets/frontend/img/blog-img/3.jpg')}}" alt=""></a>
-                                    </div>
-                                    <!-- Content -->
-                                    <div class="post-content">
-                                        <p class="post-date">MAY 22, 2018 / lifestyle</p>
-                                        <a href="#" class="post-title">
-                                            <h4>Wedding Guest Style: From Beach Casual to Black-Tie Formal</h4>
-                                        </a>
-                                        <p class="post-excerpt">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-sm-6">
-                                <div class="single-blog-post mb-50">
-                                    <!-- Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <a href="#"><img src="{{('assets/frontend/img/blog-img/4.jpg')}}" alt=""></a>
-                                    </div>
-                                    <!-- Content -->
-                                    <div class="post-content">
-                                        <p class="post-date">MAY 25, 2018 / Fashion</p>
-                                        <a href="#" class="post-title">
-                                            <h4>5 Things to Know About Dating a Bisexual</h4>
-                                        </a>
-                                        <p class="post-excerpt">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-sm-6">
-                                <div class="single-blog-post mb-50">
-                                    <!-- Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <a href="#"><img src="{{('assets/frontend/img/blog-img/5.jpg')}}" alt=""></a>
-                                    </div>
-                                    <!-- Content -->
-                                    <div class="post-content">
-                                        <p class="post-date">MAY 29, 2018 / food</p>
-                                        <a href="#" class="post-title">
-                                            <h4>7 Things Wealthy Women Do With Their Money That You Can Do Too</h4>
-                                        </a>
-                                        <p class="post-excerpt">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-sm-6">
-                                <div class="single-blog-post mb-50">
-                                    <!-- Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <a href="#"><img src="{{('assets/frontend/img/blog-img/6.jpg')}}" alt=""></a>
-                                    </div>
-                                    <!-- Content -->
-                                    <div class="post-content">
-                                        <p class="post-date">Jun 02, 2018 / SummerHoliday</p>
-                                        <a href="#" class="post-title">
-                                            <h4>The 10 Most Instagrammable Spots in San Diego</h4>
-                                        </a>
-                                        <p class="post-excerpt">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            
 
                         </div>
                     </div>
 
                     <!-- Pager -->
-                    <ol class="nikki-pager">
-                        <li><a href="#"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Newer</a></li>
-                        <li><a href="#">Older <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-                    </ol>
+                    
                 </div>
 
                 <!-- Blog Sidebar Area -->
@@ -381,74 +190,14 @@
                         <!-- ##### Single Widget Area ##### -->
                         <div class="single-widget-area mb-30">
                             <!-- Title -->
-                            <div class="widget-title">
+                            <div class="widget-title" >
                                 <h6>Latest Posts</h6>
                             </div>
+                            
+                            <div id="isi-latest-post">
 
-                            <!-- Single Latest Posts -->
-                            <div class="single-latest-post d-flex">
-                                <div class="post-thumb">
-                                    <img src="{{('assets/frontend/img/blog-img/lp1.jpg')}}" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>10 Books to Read This Summer If You Want to Improve Yourself</h6>
-                                    </a>
-                                    <a href="#" class="post-author"><span>by</span> Colorlib</a>
-                                </div>
                             </div>
-
                             <!-- Single Latest Posts -->
-                            <div class="single-latest-post d-flex">
-                                <div class="post-thumb">
-                                    <img src="{{('assets/frontend/img/blog-img/lp2.jpg')}}" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Why I Decided to Give up My Favorite Foods and Go Vegan</h6>
-                                    </a>
-                                    <a href="#" class="post-author"><span>by</span> Colorlib</a>
-                                </div>
-                            </div>
-
-                            <!-- Single Latest Posts -->
-                            <div class="single-latest-post d-flex">
-                                <div class="post-thumb">
-                                    <img src="{{('assets/frontend/img/blog-img/lp3.jpg')}}" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>The 10 Most Instagrammable Spots in San Diego</h6>
-                                    </a>
-                                    <a href="#" class="post-author"><span>by</span> Colorlib</a>
-                                </div>
-                            </div>
-
-                            <!-- Single Latest Posts -->
-                            <div class="single-latest-post d-flex">
-                                <div class="post-thumb">
-                                    <img src="{{('assets/frontend/img/blog-img/lp4.jpg')}}" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>5 Things to Know About Dating a Bisexual</h6>
-                                    </a>
-                                    <a href="#" class="post-author"><span>by</span> Colorlib</a>
-                                </div>
-                            </div>
-
-                            <!-- Single Latest Posts -->
-                            <div class="single-latest-post d-flex">
-                                <div class="post-thumb">
-                                    <img src="{{('assets/frontend/img/blog-img/lp5.jpg')}}" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>How to Take Critical Feedback at Work (Like a Boss)</h6>
-                                    </a>
-                                    <a href="#" class="post-author"><span>by</span> Colorlib</a>
-                                </div>
-                            </div>
 
                         </div>
 
@@ -478,19 +227,12 @@
                         <div class="single-widget-area mb-30">
                             <!-- Title -->
                             <div class="widget-title">
-                                <h6>popular tags</h6>
+                                <h6>popular Categories</h6>
                             </div>
                             <!-- Tags -->
-                            <ol class="popular-tags d-flex flex-wrap">
-                                <li><a href="#">LifeStyle</a></li>
-                                <li><a href="#">Sport</a></li>
-                                <li><a href="#">Fashion</a></li>
-                                <li><a href="#">Photography</a></li>
-                                <li><a href="#">Yoga</a></li>
-                                <li><a href="#">Health Food</a></li>
-                                <li><a href="#">Summer Holiday</a></li>
-                                <li><a href="#">Supper Food</a></li>
-                                <li><a href="#">Life</a></li>
+                            <ol class="popular-tags d-flex flex-wrap" id="kategori">
+                                
+                                
                             </ol>
                         </div>
 
@@ -598,6 +340,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{('assets/frontend/js/plugins/plugins.js')}}"></script>
     <!-- Active js -->
     <script src="{{('assets/frontend/js/active.js')}}"></script>
+
+    <script src="{{ asset('js/frontend.js') }}"></script>
 </body>
 
 </html>
